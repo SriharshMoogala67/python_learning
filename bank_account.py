@@ -2,7 +2,8 @@ class BankAccount:
     def __init__(self, account_holder: str, initial_balance: float = 0.0):
         self.account_holder = account_holder
         self.__balance = initial_balance
-
+        self.__transactions = []
+        
     
     def get_balance(self) -> float: 
         return self.__balance
