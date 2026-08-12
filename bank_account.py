@@ -39,6 +39,7 @@ class BankAccount:
 
             self.withdraw(amount)
             target_account.deposit(amount)
+            print(f"${amount:.2f} transferred successfully to {target_account.account_holder}")
         
             return True 
 
@@ -48,9 +49,11 @@ account = BankAccount("Sriharsh", 1000)
 print(account.account_holder)
 print(account.get_balance())
 
-
+account2 = BankAccount("John", 500)
 
 
 account.deposit(500)
 account.withdraw(200)
 print(f"${account.get_balance()}")
+account.transfer(account2, 300)    
+
